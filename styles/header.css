@@ -2,7 +2,11 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  .btn {
+  & .logo {
+    z-index: 0;
+  }
+
+  & .btn {
     display: inline-block;
     width: fit-content;
     position: relative;

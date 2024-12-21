@@ -61,6 +61,7 @@ body {
   background-attachment: fixed; /* Remove o efeito fixo para evitar cortes */
   background-position: top; /* Posiciona a imagem mais no topo */
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 @media (width >= 80em) {
