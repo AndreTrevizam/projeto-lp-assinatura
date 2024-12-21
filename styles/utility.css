@@ -4,18 +4,6 @@
   margin-inline: auto;
 }
 
-.py-base {
-  padding-block: var(--py-base);
-}
-
-.px-base {
-  padding-inline: var(--px-base);
-}
-
-.px-lg {
-  padding-inline: var(--px-lg) ;
-}
-
 .flex {
   display: flex;
 }
@@ -24,8 +12,28 @@
   display: grid;
 }
 
+.py-base {
+  padding-block: var(--py-base);
+}
+
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: initial;
+}
+
 @media (width >= 80em) {
   .container {
-    max-width: 80em;
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .mobile-only {
+    display: none;
   }
 }

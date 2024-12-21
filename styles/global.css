@@ -33,18 +33,26 @@
   --title-sm: 700 2rem;
   --title-xs: 700 1rem;
 
-  --subtitle: 500 2rem/2.0;
-  --body-lg: 400 1.25rem/1.4;
-  --body-md: 400 1rem/1.4;
-  --body-sm: 400 .875rem/1.4;
-  --body-xs: 400 .75rem/1.4;
+  --subtitle: 2rem;
+  --body-lg: 1.25rem;
+  --body-md: 1rem;
+  --body-sm: .875rem;
+  --body-xs: .75rem;
 
-  --text-button: 700 .875rem;
-  --text-link: 500 .875rem;
-  --text-tag: 700 .625rem;
+  --text-button: .875rem;
+  --text-link:  .875rem;
+  --text-tag:  .625rem;
   
   --py-base: 1.25rem;
   --px-base: 1.25rem;
 
   --px-lg: 2rem;
+}
+
+html {
+  font-family: "Raleway", serif;;
+}
+
+body {
+  background-color: var(--shape-background);
 }
