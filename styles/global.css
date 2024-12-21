@@ -28,10 +28,10 @@
   --color-label: #BAC6C9;
 
   /* Texts */
-  --title-lg: 700 3rem;
-  --title-md: 700 2.5rem;
-  --title-sm: 700 2rem;
-  --title-xs: 700 1rem;
+  --title-lg: 3rem;
+  --title-md: 2.5rem;
+  --title-sm: 2rem;
+  --title-xs: 1rem;
 
   --subtitle: 2rem;
   --body-lg: 1.25rem;
@@ -40,9 +40,9 @@
   --body-xs: .75rem;
 
   --text-button: .875rem;
-  --text-link:  .875rem;
-  --text-tag:  .625rem;
-  
+  --text-link: .875rem;
+  --text-tag: .625rem;
+
   --py-base: 1.25rem;
   --px-base: 1.25rem;
 
@@ -50,9 +50,25 @@
 }
 
 html {
-  font-family: "Raleway", serif;;
+  font-family: "Raleway", serif;
+  ;
 }
 
 body {
   background-color: var(--shape-background);
+  background-image: url('../assets/images/hero-background.png');
+  background-size: 250%; /* Ajusta a imagem para caber no espaço visível */
+  background-attachment: fixed; /* Remove o efeito fixo para evitar cortes */
+  background-position: top; /* Posiciona a imagem mais no topo */
+  background-repeat: no-repeat;
+}
+
+@media (width >= 80em) {
+  body {
+    background-image: url('../assets/images/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 }

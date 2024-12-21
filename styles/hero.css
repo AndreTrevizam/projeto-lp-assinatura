@@ -1,0 +1,40 @@
+.hero {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+
+  & header {
+    & h1 {
+      color: var(--color-title);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--color-body);
+      font-size: var(--body-sm);
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (width >= 80em) {
+  .hero {
+    margin-top: 10.25rem;
+    max-width: 41rem;
+
+    & header {
+      & h1 {
+        font-size: var(--title-lg);
+        margin-bottom: 2rem;
+      }
+
+      & p {
+        font-size: var(--body-lg);
+      }
+    }
+  }
+}
