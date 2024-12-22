@@ -1,0 +1,227 @@
+.monthly-kit {
+  margin-top: 6.5rem;
+  height: 50vh;
+
+  & .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+
+    & img {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    & h2 {
+      color: var(--color-body);
+      font-size: var(--body-lg);
+    }
+
+    & span {
+      color: var(--color-body);
+      font-size: var(--body-sm);
+    }
+  }
+
+  & .book {
+    position: relative;
+    padding: 3rem .5rem;
+
+    & img {
+      position: absolute;
+    }
+
+    .main-book {
+      z-index: 3; /* Garantir que a imagem principal fique por cima */
+      width: 150px;
+      height: 207px;
+      left: 25%;
+      animation: slideOut 1s ease both;
+      animation-timeline: view();
+      animation-range: 5% 40%;
+    }
+    
+    .bookmark-yellow {
+      width: 58px;
+      height: 180px;
+      top: 60%; /* Fora da área visível inicialmente */
+      left: 50%;
+      z-index: 2;
+      animation: slideOut 1s ease both;
+      animation-timeline: view();
+      animation-range: 5% 40%;
+
+      --top: 20%;
+      --rotate: 11deg;
+      --translateX: 110%;
+    }
+    
+    .bookmark-purple {
+      width: 58px;
+      height: 180px;
+      top: 60%;
+      left: 50%;
+      z-index: 1;
+      animation: slideOut 1s ease both;
+      animation-timeline: view();
+      animation-range: 5% 40%;
+
+      --top: 30%;
+      --rotate: 22deg;
+      --translateX: 150%;
+    }
+    
+    .pin {
+      width: 70px;
+      height: 85px;
+      top: 110%;
+      left: 30%;
+      z-index: 1;
+      animation: slideOut 1s ease both;
+      animation-timeline: view();
+      animation-range: 5% 40%;
+
+      --top: 200%;
+      --rotate: -7deg;
+      --translateX: -120%;
+    }
+  }
+}
+
+@media (width >= 80em) 
+{
+  .monthly-kit {
+    margin-top: 28rem;
+    height: 50vh;
+    margin-bottom: 150rem;
+  
+    & .title {
+      flex-direction: column;
+  
+      & img {
+        width: 2rem;
+        height: 2rem;
+      }
+  
+      & h2 {
+        font-size: var(--title-sm);
+      }
+  
+      & span {
+        font-size: var(--body-md);
+      }
+    }
+  
+    & .book {
+      margin-top: 15rem;
+      position: relative;
+      padding: 3rem .5rem;
+  
+      & img {
+        position: absolute;
+      }
+  
+      .main-book {
+        z-index: 3; /* Garantir que a imagem principal fique por cima */
+        width: 467px;
+        height: 617px;
+        left: 30%;
+        animation: slideOut 1s ease both;
+        animation-timeline: view();
+        animation-range: 5% 40%;
+      }
+      
+      .bookmark-yellow {
+        width: 172px;
+        height: 536px;
+        top: 60%; /* Fora da área visível inicialmente */
+        left: 50%;
+        z-index: 2;
+        animation: slideOut 1.5s ease both;
+        animation-timeline: view();
+        animation-range: 5% 40%;
+  
+        --top: 20%;
+        --rotate: 11deg;
+        --translateX: 110%;
+      }
+
+      .book-info {
+        top: 150%; /* Fora da área visível inicialmente */
+        left: 40%;
+        z-index: 2;
+        animation: slideOut 1.5s ease both;
+        animation-timeline: view();
+        animation-range: 10% 90%;
+  
+        --top: -18%;
+        --translateX: -153%;
+      }
+      
+      .bookmark-purple {
+        width: 172px;
+        height: 536px;
+        top: 60%;
+        left: 50%;
+        z-index: 1;
+        animation: slideOut 1.5s ease both;
+        animation-timeline: view();
+        animation-range: 5% 40%;
+  
+        --top: 30%;
+        --rotate: 22deg;
+        --translateX: 150%;
+      }
+
+      .bookmark-info {
+        top: 450%;
+        left: 40%;
+        z-index: 0;
+        animation: slideOut 1.5s ease both;
+        animation-timeline: view();
+        animation-range: 5% 30%;
+  
+        --top: 600%;
+        --translateX: 130%;
+      }
+      
+      .pin {
+        width: 222px;
+        height: 254px;
+        top: 450%;
+        left: 30%;
+        z-index: 1;
+        animation: slideOut 1.5s ease both;
+        animation-timeline: view();
+        animation-range: 5% 30%;
+  
+        --top: 500%;
+        --rotate: -7deg;
+        --translateX: -90%;
+      }
+
+      .pin-info {
+        top: 450%;
+        left: 35%;
+        z-index: 1;
+        animation: slideOut 1.5s ease both;
+        animation-timeline: view();
+        animation-range: 5% 30%;
+  
+        --top: 300%;
+        --rotate: -7deg;
+        --translateX: -200%;
+      }
+    }
+  }
+}
+
+@keyframes slideOut {
+  to {
+    top: var(--top);
+    transform: translateX(var(--translateX));
+    rotate: var(--rotate);
+  }
+}
