@@ -60,35 +60,88 @@
     align-items: center;
     justify-content: center;
     display: flex;
-
+  
     & .content {
-      & div {
+      & .hover-container {
         font-size: var(--subtitle);
+        overflow: hidden;
+      }
+  
+      img {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+  
+      .hover-container .text {
+        opacity: 0.5;
+        filter: grayscale(1);
+        transform: translateY(10px);
+        transition: opacity 0.5s ease, filter 0.5s ease;
+      }
+  
+      &:hover img:nth-child(1) {
+        transition-delay: 0s;
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      &:hover img:nth-child(2) {
+        transition-delay: 1s;
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      &:hover img:nth-child(3) {
+        transition-delay: 2s;
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      .hover-container:hover .text:nth-child(1) {
+        transition-delay: 0s;
+        opacity: 1;
+        filter: grayscale(0);
+      }
+  
+      .hover-container:hover .text:nth-child(2) {
+        transition-delay: 1s;
+        opacity: 1;
+        filter: grayscale(0);
+      }
+  
+      .hover-container:hover .text:nth-child(3) {
+        transition-delay: 2s;
+        opacity: 1;
+        filter: grayscale(0);
       }
     }
-
-    & img[src*='opened'] {
+  
+    img[src*='opened'] {
       top: -30%;
       right: 48%;
       rotate: 15deg;
       width: 5.5rem;
       height: 5.5rem;
+      animation: none;
     }
-
-    & img[src*='crystal'] {
+  
+    img[src*='crystal'] {
       bottom: -25%;
       right: 1%;
       rotate: -14deg;
       width: 4.5rem;
       height: 4.5rem;
+      animation: none;
     }
-
-    & img[src*='ouija'] {
+  
+    img[src*='ouija'] {
       bottom: -25%;
       left: 5%;
       rotate: 99deg;
       width: 5rem;
       height: 5rem;
+      animation: none;
     }
   }
 }
