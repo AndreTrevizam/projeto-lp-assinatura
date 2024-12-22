@@ -51,25 +51,8 @@
 
 html {
   font-family: "Raleway", serif;
-  ;
 }
 
 body {
   background-color: var(--shape-background);
-  background-image: url('../assets/images/hero-background.png');
-  background-size: 250%; /* Ajusta a imagem para caber no espaço visível */
-  background-attachment: fixed; /* Remove o efeito fixo para evitar cortes */
-  background-position: top; /* Posiciona a imagem mais no topo */
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-@media (width >= 80em) {
-  body {
-    background-image: url('../assets/images/hero-background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
 }

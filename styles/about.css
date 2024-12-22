@@ -1,0 +1,100 @@
+.about {
+  & .content {
+    padding: 3rem .5rem;
+    position: relative;
+
+    & div {
+      display: inline-block;
+      color: var(--color-body);
+      font-size: 1rem;
+      text-align: center;
+      line-height: 1.4;
+
+      & strong {
+        color: var(--blue-light);
+      }
+    }
+  }
+
+  & img {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  & img[src*='opened'] {
+    top: 0;
+    right: 20%;
+    rotate: 15deg;
+
+    transform: scale(0);
+    animation: popUp 0.5s 2s ease forwards;
+  }
+
+  & img[src*='crystal'] {
+    bottom: 0;
+    right: 1%;
+    rotate: 15deg;
+
+    transform: scale(0);
+    animation: popUp 0.5s 3.1s ease forwards;
+  }
+
+  & img[src*='ouija'] {
+    bottom: 5%;
+    left: 0;
+    rotate: -30deg;
+
+    transform: scale(0);
+    animation: popUp 0.5s 4s ease forwards;
+  }
+
+
+}
+
+@media (width >=80em) {
+  .about {
+    margin-top: 9rem;
+    max-height: 25rem;
+    max-width: 75rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    & .content {
+      & div {
+        font-size: var(--subtitle);
+      }
+    }
+
+    & img[src*='opened'] {
+      top: -30%;
+      right: 48%;
+      rotate: 15deg;
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+
+    & img[src*='crystal'] {
+      bottom: -25%;
+      right: 1%;
+      rotate: -14deg;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    & img[src*='ouija'] {
+      bottom: -25%;
+      left: 5%;
+      rotate: 99deg;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
+
+@keyframes popUp {
+  to {
+    transform: scale(1);
+  }
+}
