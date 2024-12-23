@@ -42,6 +42,20 @@
       animation-timeline: view();
       animation-range: 5% 40%;
     }
+
+    .book-info {
+      width: 120px;
+      top: 100%; /* Fora da área visível inicialmente */
+      left: 30%;
+      z-index: 2;
+      animation: slideOut 1.5s ease both;
+      animation-timeline: view();
+      animation-range: 10% 40%;
+
+      --left: 10%;
+      --top: 10%;
+      --translateX: -95%;
+    }
     
     .bookmark-yellow {
       width: 58px;
@@ -72,6 +86,19 @@
       --rotate: 22deg;
       --translateX: 150%;
     }
+
+    .bookmark-info {
+      width: 120px;
+      top: 100%;
+      left: 20%;
+      z-index: 0;
+      animation: slideOut 1.5s ease both;
+      animation-timeline: view();
+      animation-range: 5% 30%;
+
+      --top: 230%;
+      --translateX: 100%;
+    }
     
     .pin {
       width: 70px;
@@ -85,13 +112,26 @@
 
       --top: 200%;
       --rotate: -7deg;
-      --translateX: -120%;
+      --translateX: -100%;
+    }
+
+    .pin-info {
+      width: 70px;
+      top: 60%;
+      left: 35%;
+      z-index: 1;
+      animation: slideOut 1.5s ease both;
+      animation-timeline: view();
+      animation-range: 5% 40%;
+
+      --top: 90%;
+      --rotate: -7deg;
+      --translateX: -180%;
     }
   }
 }
 
-@media (width >= 80em) 
-{
+@media (width >= 80em) {
   .monthly-kit {
     margin-top: 28rem;
     height: 50vh;
@@ -149,6 +189,7 @@
       }
 
       .book-info {
+        width: 254px;
         top: 150%; /* Fora da área visível inicialmente */
         left: 40%;
         z-index: 2;
@@ -176,6 +217,7 @@
       }
 
       .bookmark-info {
+        width: 234px;
         top: 450%;
         left: 40%;
         z-index: 0;
@@ -203,6 +245,7 @@
       }
 
       .pin-info {
+        width: 126px;
         top: 450%;
         left: 35%;
         z-index: 1;
