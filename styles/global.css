@@ -56,3 +56,44 @@ html {
 body {
   background-color: var(--shape-background);
 }
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+  background-color: var(--pink-dark);
+  color: var(--color-title);
+  font: var(--text-button);
+  font-weight: 700;
+}
+
+& .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #e69cff1f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width .8s ease, height .8s ease, transform .5s ease;
+  z-index: 0;
+  will-change: width, height, transform;
+}
+
+.secondary {
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--blue-low);
+  text-align: center;
+}
+
+.even-columns {
+  display: grid;
+  gap: 2rem;
+}

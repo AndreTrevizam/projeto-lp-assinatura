@@ -1,0 +1,116 @@
+.pricing {
+  border: 1px solid red;
+  margin-top: 6rem;
+  & header {
+    margin-bottom: 3rem;
+
+    & h3 {
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  & .cards {
+    display: grid;
+    gap: 1rem;
+
+    & .card {
+      max-width: 17rem;
+      max-height: 26rem;
+      display: grid;
+      justify-self: center;
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--shape-stroke);
+      background-color: var(--shape-base);
+      border-radius: 2rem;
+  
+      & h4 {
+        color: var(--blue-light);
+        font-size: var(--title-xs);
+        margin-bottom: 2rem;
+      }
+  
+      & price {
+        color: var(--color-title);
+        font-size: var(--title-md);
+        font-weight: 700;
+  
+        & small {
+          font-size: var(--title-xs);
+        }
+      }
+  
+      & span {
+        margin-top: .5rem;
+        color: var(--color-label);
+        font-size: var(--body-sm);
+        margin-bottom: 5.1rem;
+      }
+  
+      .card-list {
+        display: grid;
+        gap: .75rem;
+        list-style-image: url(../assets/icons/star-ul.svg);
+        list-style-position: inside;
+        margin-bottom: 1.5rem;
+  
+        & li {
+          color: var(--color-body);
+          font-size: var(--body-xs);
+        }
+  
+      }
+    }
+
+    & .card.semestral {
+      background-color: var(--shape-hover);
+      position: relative;
+      margin-block: 3rem;
+
+      & img {
+        position: absolute;
+        top: -12.5%;
+        left: 10%;
+      }
+
+      & span {
+        margin-bottom: 3.375rem;
+      }
+      
+
+      & h4 {
+        color: var(--pink-light);
+      }
+
+      & .btn {
+        width: 100%;
+        height: 2.5rem;
+        text-align: center;
+      }
+
+      & .popular {
+        all: unset;
+        font-size: var(--text-tag);
+        text-transform: uppercase;
+        color: var(--color-body);
+        background-color: var(--shape-stroke);
+        border-radius: 999px;
+        padding: .5rem 1.25rem ;
+        position: absolute;
+        right: 10%;
+        top: 7%;
+      }
+      
+      & .card-list {
+        list-style-image: url(../assets/icons/star-ul-semestral.svg);
+      }
+    }
+
+    & .card.anual {
+      & span {
+        margin-bottom: 1.563rem;
+      }
+    }
+  }
+}

@@ -95,7 +95,7 @@
   .monthly-kit {
     margin-top: 28rem;
     height: 50vh;
-    margin-bottom: 150rem;
+    margin-bottom: 50rem;
   
     & .title {
       flex-direction: column;
@@ -210,9 +210,9 @@
         animation-timeline: view();
         animation-range: 5% 30%;
   
-        --top: 300%;
+        --top: 380%;
         --rotate: -7deg;
-        --translateX: -200%;
+        --translateX: -280%;
       }
     }
   }
